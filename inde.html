@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё резюме</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #147fdc;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            
+            display: flex;
+        }
+        .form-but{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #448fd4 ;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-inline {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .form-inline-input{
+            margin-right: 10px;
+            margin-left: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .form-inline-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        button:hover {
+            background-color: #0848bf;
+        }
+        .cent-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+    <h1>Моё резюме</h1>
+    <div class="cent-img"><img src="https://sun1-54.userapi.com/s/v1/if2/mr5y2gjnvezZGU7VH4MsHdwlrndanv_YaVgSAf95ZQj9GOB2yKRVvj0_wmBZDp3_fp9hMri17beF9ztd5HmlDjZi.jpg?quality=96&crop=217,318,747,747&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&u=Kd2hv0cJoqnQhH9VBffwnhhG00LE-q2ShNoS1T2KrzM&cs=400x400" alt="Моё фото" style="width: 150px; height: 150px; border-radius: 50%; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);"></div>
+    <p>Имя: <span id="name">Алексей</span></p>
+    <p>Фамилия: <span id="surname">Куимов</span></p>
+    <div class="form-inline">
+    <input type="text" id="newSurname" placeholder="Введите новую фамилию" maxlength="50%" class="form-inline-input"> <button class="form-inline-button" onclick="changeSurname()">Изменить фамилию</button></div>
+    <div class="form-inline">
+    <input type="text" id="newName" placeholder="Введите новое имя" class="form-inline-input">  <button class="form-inline-button" onclick="changeName()">Изменить имя</button></div>
+    
+    <div class="form-but"><button onclick="changeBackgroundColor()">Изменить цвет фона</button></div>
+
+    <script>
+        function changeSurname() {
+            var newSurname = document.getElementById("newSurname").value;
+            document.getElementById("surname").innerText = newSurname;
+        }
+  function changeName() {
+            var newSurname = document.getElementById("newName").value;
+            document.getElementById("name").innerText = newSurname;
+        }
+
+        function changeBackgroundColor() {
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+<body>
+<h2><button onclick="window.location.href = 'ex1.html';">Индивидуальное задание №1</button></h2>
+<h2><button onclick="window.location.href = 'ex2.html';">Индивидуальное задание №2</button></h2>
+<h2><button onclick="window.location.href = 'ex3.html';">Индивидуальное задание №3</button></h2>
+<h2><button onclick="window.location.href = 'hr.html';">Индивидуальное задание №4</button></h2>
+<h2><button onclick="window.location.href = 'dopInd.html';">Дополнительное Индивидуальное задание: радуга</button></h2>
+</body>
+</html>

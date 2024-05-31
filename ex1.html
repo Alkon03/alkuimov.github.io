@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<little><i>Какое из чисел максимально?</i></little>
+</head>
+<body>
+	<h5>Найдем максимум двух чисел</h5>
+	<input type="number" id="n11">
+    <b>
+        <label1 for = "n11">-первое число</label1>
+    </b>
+	<br>
+	<input type="number" id="n22">
+	<b>
+        <label for="n22">-второе число</label>
+    </b>
+	<br>
+	<br>
+	<h1>
+		<button onclick="findMax()">Вычислить</button>
+		<br>
+		<p id="otvet1"></p>
+	</h1>
+
+	<script>
+		function findMax(){
+
+			var n11 = document.getElementById('n11').value;
+			var n22 = document.getElementById('n22').value;
+
+			var maxN = Math.max(n11, n22);
+
+			document.getElementById('otvet1').textContent = "Максимальное число: " + maxN;
+		}
+	</script>
+
+<head>
+	<little><i>Какое из чисел минимальное?</i></little>
+</head>
+
+	<h5>Найдем минимум двух чисел</h5>
+	<input type="number" id="n1">
+    <b>
+        <label1 for = "n1">-первое число</label1>
+    </b>
+	<br>
+	<input type="number" id="n2">
+	<b>
+        <label for="n2">-второе число</label>
+    </b>
+	<br>
+	<br>
+	<h1>
+		<button onclick="findMin()">Вычислить</button>
+		<br>
+		<p id="otvet2"></p>
+	</h1>
+
+	<script>
+		function findMin(){
+
+			var n1 = document.getElementById('n1').value;
+			var n2 = document.getElementById('n2').value;
+
+			var minN = Math.min(n1, n2);
+
+			document.getElementById('otvet2').textContent = "Минимальное число: " + minN;
+		}
+	</script>
+</body>
+
+<body>
+	<button onclick="window.location.href = 'index.html';">Назад</button>
+</body>
+
+</html>
